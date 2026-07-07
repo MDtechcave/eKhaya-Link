@@ -9,7 +9,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MDtechcave/eKhaya-Link.git"
@@ -23,6 +22,7 @@
   },
   "homepage": "https://github.com/MDtechcave/eKhaya-Link#readme",
   "dependencies": {
+    "firebase": "^12.15.0",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.292.0",
     "next": "^13.5.6",
