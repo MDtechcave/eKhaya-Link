@@ -1,3 +1,4 @@
+console.log("KEY:", JSON.stringify(process.env.NEXT_PUBLIC_FIREBASE_API_KEY));
 import {initializeApp,getApps,getApp} from "firebase/app";
 import {getAuth} from "firebase/auth";
 import {getFirestore} from "firebase/firestore";
@@ -10,12 +11,14 @@ const firebaseConfig = {
     storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
     appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 }
+
+console.log("FULL CONFIG:", firebaseConfig);
+
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 
 export const auth = getAuth(app);
-export const db = getFirestore(app);
+export const db = getFirestore(app); 
 export const storage = getStorage(app);
 export default app;
 
